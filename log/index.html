@@ -467,8 +467,12 @@ or
 <div class="highlight"><pre><span></span><code>wget -qO- get.docker.com | bash
 </code></pre></div></p>
 <h1 id="github-gitpages">将项目部署上线同步github gitpages<a class="headerlink" href="#github-gitpages" title="Permanent link">&para;</a></h1>
-<p>mkdocs gh-deploy
-mkdocs gh-deploy --config-file ../{文件夹}/mkdocs.yml --remote-branch main</p>
+<p>自动部署到github gitpages项目 {github用户名}.github.io/{项目名}
+<div class="highlight"><pre><span></span><code>mkdocs gh-deploy
+</code></pre></div>
+自动部署到github gitpages个人页面 {github用户名}.github.io
+<div class="highlight"><pre><span></span><code>mkdocs gh-deploy --config-file ../{文件夹}/mkdocs.yml --remote-branch main
+</code></pre></div></p>
 
               
             </article>
