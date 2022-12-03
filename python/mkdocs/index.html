@@ -660,6 +660,69 @@ pip install mkdocs 后会一同安装如下程序：</p>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>watchdog           2.1.9
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>zipp               3.6.0
 </code></pre></div>
+<hr />
+<h1 id="material">material的一些特性展示<a class="headerlink" href="#material" title="Permanent link">&para;</a></h1>
+<h2 id="_1">支持代码高亮还支持代码标题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><span class="filename">demo.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">sayhi</span><span class="p">():</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">return</span> <span class="s2">&quot;hi,Python全栈开发&quot;</span>
+</code></pre></div>
+<h2 id="_2">代码自由注释<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">theme</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.annotate</span><span class="w"> </span><span class="c1"># (1)</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>:man_raising_hand: I'm a code annotation! I can contain <code>code</code>, <strong>formatted
+    text</strong>, images, ... basically anything that can be written in Markdown.</li>
+</ol>
+<h2 id="_3">提示框<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary>这是 note 类型的提示框</summary>
+</details>
+<p>提示：更多精彩内容记得关注我啊
+1
+2
+3
+4</p>
+<div class="admonition note">
+<p class="admonition-title">这是 note 类型的提示框</p>
+</div>
+<p>提示：更多精彩内容记得关注我啊</p>
+<div class="admonition success">
+<p class="admonition-title">这是 success 类型的提示框</p>
+</div>
+<p>成功！</p>
+<div class="admonition failure">
+<p class="admonition-title">这是 failure 类型的提示框</p>
+</div>
+<p>失败！</p>
+<div class="admonition bug">
+<p class="admonition-title">这是 bug 类型的提示框</p>
+</div>
+<p>发现一个 bug，请尽快修复！</p>
+<h2 id="table">table<a class="headerlink" href="#table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>:material-check:     Fetch resource</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>:material-check-all: Update resource</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>:material-close:     Delete resource</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
