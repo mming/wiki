@@ -19,7 +19,7 @@
     
     
       
-        <title>test - Ryan DaYe (MMing)</title>
+        <title>acme使用 - Ryan DaYe (MMing)</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#test" class="md-skip">
+        <a href="#acmesh" class="md-skip">
           跳转至
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              test
+              acme使用
             
           </span>
         </div>
@@ -216,6 +216,8 @@
         
   
   
+    
+  
 
 
   
@@ -227,7 +229,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../python/mkdocs/" class="md-tabs__link">
+      <a href="../../python/mkdocs/" class="md-tabs__link md-tabs__link--active">
         Documents
       </a>
     </li>
@@ -372,12 +374,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -447,14 +451,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -494,6 +500,163 @@
       <a href="../tmuxCheatSheet/" class="md-nav__link">
         tmux快捷键
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          acme使用
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        acme使用
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acme" class="md-nav__link">
+    安装acme
+  </a>
+  
+    <nav class="md-nav" aria-label="安装acme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    设置时区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    设置默认获取证书机构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    dns方式获取证书
+  </a>
+  
+    <nav class="md-nav" aria-label="dns方式获取证书">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    测试令牌是否可行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecc" class="md-nav__link">
+    申请证书 （用ecc模式吧
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    安装证书
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crontabacme" class="md-nav__link">
+    设置crontab将acme自动续期的证书安装到自定义的目录里
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    docker安装
+  </a>
+  
+    <nav class="md-nav" aria-label="docker安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    每天凌晨2:00轮询检查更新
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    如果已经启动的项目，则使用update更新：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    附录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-firewall" class="md-nav__link">
+    附录2 firewall
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -623,7 +786,107 @@
                 
 
 
-<h1 id="test">test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h1>
+<h1 id="acmesh">acme.sh使用<a class="headerlink" href="#acmesh" title="Permanent link">&para;</a></h1>
+<p>环境：centos7</p>
+<h2 id="acme">安装acme<a class="headerlink" href="#acme" title="Permanent link">&para;</a></h2>
+<p>wget -qO- get.acme.sh | bash 
+source ~/.bashrc
+cd ~/.acme.sh/</p>
+<h3 id="_1">设置时区<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</p>
+<h3 id="_2">设置默认获取证书机构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>acme.sh --set-default-ca --server letsencrypt
+</code></pre></div>
+<h2 id="dns">dns方式获取证书<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h2>
+<p>//
+参考网址 https://github.com/acmesh-official/acme.sh/wiki/dnsapi
+Using the global API key
+First you need to login to your Cloudflare account to get your API key. Each token generated is not stored on cloudflare account and will have expiry if not set correctly. You will get this in API keys section.
+https://dash.cloudflare.com/profile 
+//</p>
+<h3 id="_3">测试令牌是否可行<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>测试此令牌
+要确认您的令牌是否工作正常，请复制下面的 CURL 命令并将其粘贴到终端 Shell 中进行测试。</p>
+<p>curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+     -H "Authorization: Bearer 这里是你自己的值" \
+     -H "Content-Type:application/json"</p>
+<p>上面第一步创建的令牌，即为token
+CF_Token="这里是你自己的值“</p>
+<p>分别获取账户ID和区域ID
+CF_Account_ID="这里是你自己的值"
+CF_Zone_ID="这里是你自己的值"   //此项非必须</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>export CF_Token=&quot;这里是你自己的值&quot;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>export CF_Account_ID=&quot;这里是你自己的值&quot;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>export CF_Zone_ID=&quot;这里是你自己的值&quot;
+</code></pre></div>
+<h3 id="ecc">申请证书 （用ecc模式吧<a class="headerlink" href="#ecc" title="Permanent link">&para;</a></h3>
+<p>acme.sh --issue -d 这里是你的域名 -d 这里是你的域名2 --dns dns_cf -k ec-256</p>
+<blockquote>
+<p>关于定时任务：编辑当前用户的定时任务表: crontab -e
+查看当前用户的定时任务: crontab -l</p>
+</blockquote>
+<h3 id="_4">安装证书<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>/root/.acme.sh/acme.sh --installcert -d 这里是你的域名 -d 这里是你的域名 --fullchain-file /自定义路径/cert.crt --key-file /自定义路径/private.key --ecc</p>
+<h3 id="crontabacme">设置crontab将acme自动续期的证书安装到自定义的目录里<a class="headerlink" href="#crontabacme" title="Permanent link">&para;</a></h3>
+<p>创建 renew.sh脚本，并使用crontab定时跑脚本
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/root/.acme.sh/acme.sh --installcert -d 这里是你的域名 -d 这里是你的域名 --fullchain-file /自定义路径/cert.crt --key-file /自定义路径/private.key --ecc
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>echo &quot;Certificates Renewed&quot;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>chmod +r /自定义路径private.key
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>echo &quot;Read Permission Granted for Private Key&quot;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>docker restart nginx
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>echo &quot;nginx Restarted&quot;
+</code></pre></div></p>
+<h2 id="docker">docker安装<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<p>安装 Docker 
+curl -fsSL https://get.docker.com | sh
+or wget -qO- get.docker.com | bash
+docker pull nginx</p>
+<p>docker pull containrrr/watchtower</p>
+<h3 id="200">每天凌晨2:00轮询检查更新<a class="headerlink" href="#200" title="Permanent link">&para;</a></h3>
+<p>docker run -d \
+    --name watchtower \
+    --restart unless-stopped \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    containrrr/watchtower -c \
+    --schedule "0 0 2 * * *"</p>
+<h3 id="update">如果已经启动的项目，则使用update更新：<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
+<p>docker update --restart=always 【dockername】</p>
+<hr />
+<h2 id="_5">附录<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>```手动更新证书：
+acme.sh --renew -d example.com --force
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>```查看证书列表：
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>acme.sh --list
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>acme.sh --remove -d example.com
+</code></pre></div>
+<p>常见问题
+-bash: acme.sh: command not found
+我暂时只遇到了该问题，解决办法是使用 acme 的绝对地址或者在acme.sh前加./
+/root/.acme.sh/acme.sh  --issue  -d example.com  --dns dns_cf  -d *.example.com    #方法1
+./acme.sh  --issue  -d example.com  --dns dns_cf  -d *.example.com                 #方法2</p>
+<h2 id="2-firewall">附录2 firewall<a class="headerlink" href="#2-firewall" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[root@centos7 ~]# firewall-cmd --zone=public --add-port=80/tcp --permanent
+</code></pre></div>
+<p>```查询端口号80 是否开启：
+[root@centos7 ~]# firewall-cmd --query-port=80/tcp
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>```重启防火墙：
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>[root@centos7 ~]# firewall-cmd --reload
+</code></pre></div></p>
+<p>```查询有哪些端口是开启的:
+[root@centos7 ~]# firewall-cmd --list-port
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>命令含义：
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>--zone #作用域
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>--add-port=80/tcp #添加端口，格式为：端口/通讯协议
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>--permanent #永久生效，没有此参数重启后失效
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>```关闭firewall：
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>systemctl stop firewalld.service #停止firewall
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>systemctl disable firewalld.service #禁止firewall开机启动
+</code></pre></div></p>
 
               
             </article>
@@ -638,6 +901,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../tmuxCheatSheet/" class="md-footer__link md-footer__link--prev" aria-label="上一页: tmux快捷键" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              tmux快捷键
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../project/" class="md-footer__link md-footer__link--next" aria-label="下一页: 项目管理" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              项目管理
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
