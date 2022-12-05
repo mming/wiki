@@ -9,3 +9,6 @@
 .vim
 .DS_Store
 site
+mkdocsbuild.sh
+vsmkdocsbuild.sh
+mkdocsbuild_crontab.sh
