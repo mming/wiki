@@ -795,7 +795,7 @@ cd ~/.acme.sh/</p>
 <h3 id="_1">设置时区<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</p>
 <h3 id="_2">设置默认获取证书机构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>acme.sh --set-default-ca --server letsencrypt
+<div class="highlight"><span class="filename">设置默认证书分发机构为letsencrypt.org</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">default</span><span class="o">-</span><span class="n">ca</span> <span class="o">--</span><span class="n">server</span> <span class="n">letsencrypt</span>
 </code></pre></div>
 <h2 id="dns">dns方式获取证书<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h2>
 <p>//
@@ -815,9 +815,9 @@ CF_Token="这里是你自己的值“</p>
 <p>分别获取账户ID和区域ID
 CF_Account_ID="这里是你自己的值"
 CF_Zone_ID="这里是你自己的值"   //此项非必须</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>export CF_Token=&quot;这里是你自己的值&quot;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>export CF_Account_ID=&quot;这里是你自己的值&quot;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>export CF_Zone_ID=&quot;这里是你自己的值&quot;
+<div class="highlight"><span class="filename">终端输入命令</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">export</span> <span class="n">CF_Token</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">export</span> <span class="n">CF_Account_ID</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">export</span> <span class="n">CF_Zone_ID</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
 </code></pre></div>
 <h3 id="ecc">申请证书 （用ecc模式吧<a class="headerlink" href="#ecc" title="Permanent link">&para;</a></h3>
 <p>acme.sh --issue -d 这里是你的域名 -d 这里是你的域名2 --dns dns_cf -k ec-256</p>
@@ -829,14 +829,14 @@ CF_Zone_ID="这里是你自己的值"   //此项非必须</p>
 <p>/root/.acme.sh/acme.sh --installcert -d 这里是你的域名 -d 这里是你的域名 --fullchain-file /自定义路径/cert.crt --key-file /自定义路径/private.key --ecc</p>
 <h3 id="crontabacme">设置crontab将acme自动续期的证书安装到自定义的目录里<a class="headerlink" href="#crontabacme" title="Permanent link">&para;</a></h3>
 <p>创建 renew.sh脚本，并使用crontab定时跑脚本
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/root/.acme.sh/acme.sh --installcert -d 这里是你的域名 -d 这里是你的域名 --fullchain-file /自定义路径/cert.crt --key-file /自定义路径/private.key --ecc
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>echo &quot;Certificates Renewed&quot;
+<div class="highlight"><span class="filename">renew.sh</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">acme</span><span class="o">.</span><span class="n">sh</span><span class="o">/</span><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">installcert</span> <span class="o">-</span><span class="n">d</span> <span class="n">这里是你的域名</span> <span class="o">-</span><span class="n">d</span> <span class="n">这里是你的域名</span> <span class="o">--</span><span class="n">fullchain</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">自定义路径</span><span class="o">/</span><span class="n">cert</span><span class="o">.</span><span class="n">crt</span> <span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">自定义路径</span><span class="o">/</span><span class="n">private</span><span class="o">.</span><span class="n">key</span> <span class="o">--</span><span class="n">ecc</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">echo</span> <span class="s2">&quot;Certificates Renewed&quot;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>chmod +r /自定义路径private.key
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>echo &quot;Read Permission Granted for Private Key&quot;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">chmod</span> <span class="o">+</span><span class="n">r</span> <span class="o">/</span><span class="n">自定义路径private</span><span class="o">.</span><span class="n">key</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">echo</span> <span class="s2">&quot;Read Permission Granted for Private Key&quot;</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>docker restart nginx
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>echo &quot;nginx Restarted&quot;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">docker</span> <span class="n">restart</span> <span class="n">nginx</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">echo</span> <span class="s2">&quot;nginx Restarted&quot;</span>
 </code></pre></div></p>
 <h2 id="docker">docker安装<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
 <p>安装 Docker 
@@ -989,8 +989,6 @@ acme.sh --renew -d example.com --force
       <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
       
         <script src="../../assets/js/busuanzi.pure.mini.js"></script>
-      
-        <script src="//cdn.staticaly.com/gh/codeslive/cdn@main/js/imageszoom.js"></script>
       
     
   </body>
