@@ -640,6 +640,14 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#docker-update-restartalways-dockername" class="md-nav__link">
+    docker update --restart=always 【dockername】
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     附录
   </a>
@@ -789,13 +797,15 @@
 <h1 id="acmesh">acme.sh使用<a class="headerlink" href="#acmesh" title="Permanent link">&para;</a></h1>
 <p>环境：centos7</p>
 <h2 id="acme">安装acme<a class="headerlink" href="#acme" title="Permanent link">&para;</a></h2>
-<p>wget -qO- get.acme.sh | bash 
-source ~/.bashrc
-cd ~/.acme.sh/</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget -qO- get.acme.sh | bash 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>source ~/.bashrc
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>cd ~/.acme.sh/
+</code></pre></div>
 <h3 id="_1">设置时区<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<p>cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre></div>
 <h3 id="_2">设置默认获取证书机构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><span class="filename">设置默认证书分发机构为letsencrypt.org</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">default</span><span class="o">-</span><span class="n">ca</span> <span class="o">--</span><span class="n">server</span> <span class="n">letsencrypt</span>
+<div class="highlight"><span class="filename">设置默认证书分发机构为letsencrypt.org</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">default</span><span class="o">-</span><span class="n">ca</span> <span class="o">--</span><span class="n">server</span> <span class="n">letsencrypt</span>
 </code></pre></div>
 <h2 id="dns">dns方式获取证书<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h2>
 <p>//
@@ -806,21 +816,23 @@ https://dash.cloudflare.com/profile
 //</p>
 <h3 id="_3">测试令牌是否可行<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>测试此令牌
-要确认您的令牌是否工作正常，请复制下面的 CURL 命令并将其粘贴到终端 Shell 中进行测试。</p>
-<p>curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \
-     -H "Authorization: Bearer 这里是你自己的值" \
-     -H "Content-Type:application/json"</p>
-<p>上面第一步创建的令牌，即为token
+要确认您的令牌是否工作正常，请复制下面的 CURL 命令并将其粘贴到终端 Shell 中进行测试。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl -X GET &quot;https://api.cloudflare.com/client/v4/user/tokens/verify&quot; \
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>     -H &quot;Authorization: Bearer 这里是你自己的值&quot; \
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>     -H &quot;Content-Type:application/json&quot;
+</code></pre></div>
+上面第一步创建的令牌，即为token
 CF_Token="这里是你自己的值“</p>
 <p>分别获取账户ID和区域ID
 CF_Account_ID="这里是你自己的值"
 CF_Zone_ID="这里是你自己的值"   //此项非必须</p>
-<div class="highlight"><span class="filename">终端输入命令</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">export</span> <span class="n">CF_Token</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">export</span> <span class="n">CF_Account_ID</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">export</span> <span class="n">CF_Zone_ID</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
+<div class="highlight"><span class="filename">终端输入命令</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">export</span> <span class="n">CF_Token</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">export</span> <span class="n">CF_Account_ID</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">export</span> <span class="n">CF_Zone_ID</span><span class="o">=</span><span class="s2">&quot;这里是你自己的值&quot;</span>
 </code></pre></div>
 <h3 id="ecc">申请证书 （用ecc模式吧<a class="headerlink" href="#ecc" title="Permanent link">&para;</a></h3>
-<p>acme.sh --issue -d 这里是你的域名 -d 这里是你的域名2 --dns dns_cf -k ec-256</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>acme.sh --issue -d 这里是你的域名 -d 这里是你的域名2 --dns dns_cf -k ec-256
+</code></pre></div>
 <blockquote>
 <p>关于定时任务：编辑当前用户的定时任务表: crontab -e
 查看当前用户的定时任务: crontab -l</p>
@@ -829,38 +841,40 @@ CF_Zone_ID="这里是你自己的值"   //此项非必须</p>
 <p>/root/.acme.sh/acme.sh --installcert -d 这里是你的域名 -d 这里是你的域名 --fullchain-file /自定义路径/cert.crt --key-file /自定义路径/private.key --ecc</p>
 <h3 id="crontabacme">设置crontab将acme自动续期的证书安装到自定义的目录里<a class="headerlink" href="#crontabacme" title="Permanent link">&para;</a></h3>
 <p>创建 renew.sh脚本，并使用crontab定时跑脚本
-<div class="highlight"><span class="filename">renew.sh</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">acme</span><span class="o">.</span><span class="n">sh</span><span class="o">/</span><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">installcert</span> <span class="o">-</span><span class="n">d</span> <span class="n">这里是你的域名</span> <span class="o">-</span><span class="n">d</span> <span class="n">这里是你的域名</span> <span class="o">--</span><span class="n">fullchain</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">自定义路径</span><span class="o">/</span><span class="n">cert</span><span class="o">.</span><span class="n">crt</span> <span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">自定义路径</span><span class="o">/</span><span class="n">private</span><span class="o">.</span><span class="n">key</span> <span class="o">--</span><span class="n">ecc</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">echo</span> <span class="s2">&quot;Certificates Renewed&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">chmod</span> <span class="o">+</span><span class="n">r</span> <span class="o">/</span><span class="n">自定义路径private</span><span class="o">.</span><span class="n">key</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">echo</span> <span class="s2">&quot;Read Permission Granted for Private Key&quot;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">docker</span> <span class="n">restart</span> <span class="n">nginx</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">echo</span> <span class="s2">&quot;nginx Restarted&quot;</span>
+<div class="highlight"><span class="filename">renew.sh</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">acme</span><span class="o">.</span><span class="n">sh</span><span class="o">/</span><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">installcert</span> <span class="o">-</span><span class="n">d</span> <span class="n">这里是你的域名</span> <span class="o">-</span><span class="n">d</span> <span class="n">这里是你的域名</span> <span class="o">--</span><span class="n">fullchain</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">自定义路径</span><span class="o">/</span><span class="n">cert</span><span class="o">.</span><span class="n">crt</span> <span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">自定义路径</span><span class="o">/</span><span class="n">private</span><span class="o">.</span><span class="n">key</span> <span class="o">--</span><span class="n">ecc</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">echo</span> <span class="s2">&quot;Certificates Renewed&quot;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">chmod</span> <span class="o">+</span><span class="n">r</span> <span class="o">/</span><span class="n">自定义路径private</span><span class="o">.</span><span class="n">key</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">echo</span> <span class="s2">&quot;Read Permission Granted for Private Key&quot;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">docker</span> <span class="n">restart</span> <span class="n">nginx</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">echo</span> <span class="s2">&quot;nginx Restarted&quot;</span>
 </code></pre></div></p>
 <h2 id="docker">docker安装<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
-<p>安装 Docker 
-curl -fsSL https://get.docker.com | sh
-or wget -qO- get.docker.com | bash
-docker pull nginx</p>
-<p>docker pull containrrr/watchtower</p>
+<div class="highlight"><span class="filename">安装 Docker</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">get</span><span class="o">.</span><span class="n">docker</span><span class="o">.</span><span class="n">com</span> <span class="o">|</span> <span class="n">sh</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="ow">or</span> <span class="n">wget</span> <span class="o">-</span><span class="n">qO</span><span class="o">-</span> <span class="n">get</span><span class="o">.</span><span class="n">docker</span><span class="o">.</span><span class="n">com</span> <span class="o">|</span> <span class="n">bash</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">docker</span> <span class="n">pull</span> <span class="n">nginx</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">docker</span> <span class="n">pull</span> <span class="n">containrrr</span><span class="o">/</span><span class="n">watchtower</span>
+</code></pre></div>
 <h3 id="200">每天凌晨2:00轮询检查更新<a class="headerlink" href="#200" title="Permanent link">&para;</a></h3>
-<p>docker run -d \
-    --name watchtower \
-    --restart unless-stopped \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    containrrr/watchtower -c \
-    --schedule "0 0 2 * * *"</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker run -d \
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    --name watchtower \
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    --restart unless-stopped \
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    -v /var/run/docker.sock:/var/run/docker.sock \
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    containrrr/watchtower -c \
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    --schedule &quot;0 0 2 * * *&quot;
+</code></pre></div>
 <h3 id="update">如果已经启动的项目，则使用update更新：<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
-<p>docker update --restart=always 【dockername】</p>
-<hr />
+<h2 id="docker-update-restartalways-dockername"><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker update --restart=always 【dockername】
+</code></pre></div><a class="headerlink" href="#docker-update-restartalways-dockername" title="Permanent link">&para;</a></h2>
 <h2 id="_5">附录<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>```手动更新证书：
 acme.sh --renew -d example.com --force
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>```查看证书列表：
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>acme.sh --list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>```查看证书列表：
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>acme.sh --list
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>acme.sh --remove -d example.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>acme.sh --remove -d example.com
 </code></pre></div>
 <p>常见问题
 -bash: acme.sh: command not found
@@ -868,24 +882,24 @@ acme.sh --renew -d example.com --force
 /root/.acme.sh/acme.sh  --issue  -d example.com  --dns dns_cf  -d *.example.com    #方法1
 ./acme.sh  --issue  -d example.com  --dns dns_cf  -d *.example.com                 #方法2</p>
 <h2 id="2-firewall">附录2 firewall<a class="headerlink" href="#2-firewall" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[root@centos7 ~]# firewall-cmd --zone=public --add-port=80/tcp --permanent
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>[root@centos7 ~]# firewall-cmd --zone=public --add-port=80/tcp --permanent
 </code></pre></div>
 <p>```查询端口号80 是否开启：
 [root@centos7 ~]# firewall-cmd --query-port=80/tcp
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>```重启防火墙：
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>[root@centos7 ~]# firewall-cmd --reload
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>```重启防火墙：
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>[root@centos7 ~]# firewall-cmd --reload
 </code></pre></div></p>
 <p>```查询有哪些端口是开启的:
 [root@centos7 ~]# firewall-cmd --list-port
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>命令含义：
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>--zone #作用域
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>--add-port=80/tcp #添加端口，格式为：端口/通讯协议
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>--permanent #永久生效，没有此参数重启后失效
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>```关闭firewall：
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>systemctl stop firewalld.service #停止firewall
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>systemctl disable firewalld.service #禁止firewall开机启动
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>命令含义：
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>--zone #作用域
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>--add-port=80/tcp #添加端口，格式为：端口/通讯协议
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>--permanent #永久生效，没有此参数重启后失效
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>```关闭firewall：
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>systemctl stop firewalld.service #停止firewall
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>systemctl disable firewalld.service #禁止firewall开机启动
 </code></pre></div></p>
 
               
