@@ -17,7 +17,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * 有自己的vps
 * mkdocs使用python语言，几行命令就完成安装，用vscode remote模式进行日常markdown文档编写，设置crontab定时发布静态页面
 * 自动同步github.io
-* 图床的问题，展示没想到好的方法 （[vanblog](https://vanblog.mereith.com/intro.html)的确是很好的现成轮子）
+* 图床的问题，没想到好的方法 （[vanblog](https://vanblog.mereith.com/intro.html)的确是很好的现成轮子）
 
 ## 网站内容
 

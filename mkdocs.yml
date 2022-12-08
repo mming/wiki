@@ -1,4 +1,4 @@
-site_name: Ryan Daye
+site_name: Ryan DaYe (MMing)
 site_url: https://168848.xyz
 site_description: "python,vps,linux,ios,macos"
 repo_url: https://github.com/mming/mming.github.io
@@ -16,6 +16,8 @@ nav:
   - VPS: 
     - 升级centos7的git程序: vps/updateCentos7Git.md
     - tmux快捷键: vps/tmuxCheatSheet.md
+    - acme使用: vps/acme.md
+    - telegramBot: vps/telegramBot.md
   - Project Manage:
     - 项目管理: project.md
 - About:
@@ -149,7 +151,7 @@ extra_css:
 extra_javascript: 
   #- '//cdn.staticaly.com/gh/codeslive/cdn@main/js/busuanzi.pure.mini.js' # 网站访问统计
   - 'assets/js/busuanzi.pure.mini.js'
-  - '//cdn.staticaly.com/gh/codeslive/cdn@main/js/imageszoom.js' # 图片放大js
+  # - '//cdn.staticaly.com/gh/codeslive/cdn@main/js/imageszoom.js' # 图片放大js
   #- '//cdn.staticaly.com/gh/codeslive/cdn@main/js/jquery-3.2.1.min.js' 
   #- '//cdn.staticaly.com/gh/codeslive/cdn@main/js/simplelightbox.min.js'  #图片放大js
   #- '//cdn.staticaly.com/gh/codeslive/cdn@main/js/custom.js'

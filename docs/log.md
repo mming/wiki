@@ -20,3 +20,19 @@ mkdocs gh-deploy
 ```
 mkdocs gh-deploy --config-file ../{文件夹}/mkdocs.yml --remote-branch main
 ```
+
+# .gitignore 文件
+
+git 上传是忽略不想上传的文件
+
+``` python title = '.gitignore放到git项目根目录'
+/benchmarks/
+/spell/
+/.vault.vim
+/.local.vimrc
+/.stignore
+/.stfolder
+/.stversions
+.vim
+.DS_Store
+site
