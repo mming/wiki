@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://168848.xyz/projectManagement/scrcpy/</loc>
+         <lastmod>2022-12-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://168848.xyz/python/mkdocs/</loc>
          <lastmod>2022-12-14</lastmod>
          <changefreq>daily</changefreq>
