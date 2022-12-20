@@ -865,6 +865,78 @@
 <p><img alt="img" src="https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost3@main/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%B5%AE%E7%82%B9/%E5%B0%81%E8%A3%85.png" /></p>
 <p>网络接口层的传输单位是帧（frame），IP 层的传输单位是包（packet），TCP 层的传输单位是段（segment），HTTP 的传输单位则是消息或报文（message）。但这些名词并没有什么本质的区分，可以统称为数据包。</p>
 <hr />
+<blockquote>
+<p>TCP maximum segment size 是什麼以及是如何決定的
+網路傳輸時需要一些標頭檔決定封包如何傳送，所以封包帶的資料愈大愈划算。以 TCP 為例，TCP 和 IP 標頭檔都是 20 bytes，用 40 bytes 的標頭檔只傳 1 byte 就很不划算。TCP 設定封包所帶的資料上限稱為 maximum segment size (MSS)，理論上我們希望它愈大愈好。</p>
+</blockquote>
+<p>以下記錄和 MSS 相關的知識，懶得看的話只要記住一個結論: OS 都處理好了，沒事不要手癢亂改 MSS 的值。</p>
+<p>Maximum Transmission Unit (MTU)
+在討論 MSS 之前，先看 IP layer 的情況。router 之間傳輸封包大小的上限稱為 MTU。當 router 發現封包大小超出下一站 router 的上限時，它有兩個選擇:</p>
+<p>拆成更小的封包送出。
+回傳來源用更小的封包大小 (送出 ICMP “packet too big” 訊息)。
+IPv4 有支援 1 &amp; 2，但 1 會帶給 router 太多負擔 (memory &amp; CPU)，可能會被用作攻擊手段，所以很多 router 不支援 1。IPv6 只支援 2。</p>
+<p>Path MTU Discovery
+透過 ICMP 通知 “packet too big” 不斷嘗試找出兩端機器可行的 MTU，稱為 Path MTU Discovery (PMTUD)。</p>
+<p>但是有些 router 基於安全理由 (#1)，會濾掉 ICMP 封包，所以 PMTUD 也不可靠。若用了太大的封包，且中間的 router 沒有回傳 ICMP “packet too big”，結果是 TCP handshake成功，但後面都收不到也傳不出資料。</p>
+<p>最穩的作法是一開始就不要讓封包超出 MTU 上限。IPv4 規定 router 至少要能處理 576 bytes，IPv6 是1280 bytes。使用最小值固然能避開最壞情況，但是這樣傳輸效率不好。</p>
+<p>幸好如今的 Internet 幾乎都用 Ethernet，Ethernet 標準規範至少有 1500 bytes，所以可以安心地假設 MTU = 1500。</p>
+<p>Linux 上可以用 ping 作 PMTUD，下面是計算本機到 8.8.8.8 (Google DNS) 的 PMTU:</p>
+<p>$ ping -c 1 -M do -s 2000 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 2000(2028) bytes of data.
+ping: local error: Message too long, mtu=1500
+我用 adb shell 連上 Android phone 用一樣的指令，在 Wifi 和 4G 得到一樣的結果:</p>
+<h1 id="wifi">Wifi<a class="headerlink" href="#wifi" title="Permanent link">&para;</a></h1>
+<p>elsa:/ $ ip route
+192.168.1.0/24 dev wlan0  proto kernel  scope link  src 192.168.1.103
+elsa:/ $ ping -c 1 -M do -s 2000 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 2000(2028) bytes of data.
+ping: local error: Message too long, mtu=1500</p>
+<h1 id="4g">4G<a class="headerlink" href="#4g" title="Permanent link">&para;</a></h1>
+<p>elsa:/ $ ip route
+10.47.188.192/26 dev rmnet_data0  proto kernel  scope link  src 10.47.188.223
+elsa:/ $ ping -c 1 -M do -s 2000 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 2000(2028) bytes of data.
+ping: local error: Message too long, mtu=1500
+不確定行動網路的 MTU 是否都 ≥ 1500。即使不是，TCP 也不會有問題 (後述)。</p>
+<p>TCP SYN 與 MSS
+了解 IP layer 的情況後，再來看 TCP 的情況。</p>
+<p>TCP 會設 IP 的Don’t Fragment flag，這樣 router 覺得封包太大的時候，會回傳 ICMP “packet too big”，避開 router不處理 IP fragmentation 的問題。如前所述，我們不能完全依賴這個。TCP 在 three-way handshake 的時候還會透過 SYN 封包帶上 MSS，告訴另一邊不要送超出 MSS 的封包過來。OS 會自動用下一站的 MTU — 40 作為 MSS (TCP 和 IP 標頭檔各 20 bytes)，所以無論是直接用 Ethernet 或行動網路，都不會有問題。對 Ethernet 來說，MSS 就是 1500 — 40 = 1460。</p>
+<p>MSS clamping
+某些情況下中間 router 的 MTU 會比 1500 小，常見的情況有:</p>
+<p>使用 PPPoE。
+使用 VPN (#2)。
+IPv6 tunnel 通過 IPv4 網路。
+以 PPPoE 為例，會多 8 ~ 12 bytes 的標頭檔，所以 MSS 必須再少 8 ~ 12 bytes。要求全部 client 更改 OS 的 MSS 設定並不實際，所以現行的作法是 PPPoE 的 server 會偷改 SYN 封包裡的 MSS [#3]，讓它不要超出上限，這個行為稱為 MSS clamping。也就是說 client 以為它用 MSS = 1460，但 PPPoE server 在經手的時候改成 MSS = 1452 (假設 PPP 標頭是 8 bytes)。</p>
+<p>不合規定 (MTU≥1500) 的 router 負責作 TCP clamping，相當合理。於是天下太平，不會有人用超出 MTU 上限 ，也就不用擔心某些 router 濾掉 ICMP 的問題了。</p>
+<p>Linux 設定 MSS 的方法
+可以透過 ip route 設定不同目標的 advmss，這樣 MSS 不會超過 advmss。程式裡也可透過 setsockopt(..., TCP_MAXSEG) 設定，但通常沒必要。</p>
+<p>我在 Ubuntu 16.04 用 tcpdump 看 SYN 的封包，發現預設值已是最佳值了。用以下的指令觀察 SYN 帶的 MSS:</p>
+<p>sudo tcpdump -s0 -p -ni INTERFACE '(ip and ip[20+13] &amp; tcp-syn != 0)'
+連本機的 MSS = 65495 ( 65535 — 40 )，已是上限:</p>
+<p>23:52:45.009601 IP 192.168.1.109.38728 &gt; 192.168.1.109.8000: Flags [S], seq 2523441450, win 43690, options [mss 65495,sackOK,TS val 27165590 ecr 0,nop,wscale 7], length 0
+23:52:45.009629 IP 192.168.1.109.8000 &gt; 192.168.1.109.38728: Flags [S.], seq 1592261220, ack 2523441451, win 43690, options [mss 65495,sackOK,TS val 27165590 ecr 27165590,nop,wscale 7], length 0
+VM 連 VM 的 MSS = 1460:</p>
+<p>23:52:00.297788 IP 192.168.1.110.52397 &gt; 192.168.1.109.8000: Flags [S], seq 1208990698, win 29200, options [mss 1460,sackOK,TS val 4294911018 ecr 0,nop,wscale 7], length 0
+23:52:00.297833 IP 192.168.1.109.8000 &gt; 192.168.1.110.52397: Flags [S.], seq 2916193787, ack 1208990699, win 28960, options [mss 1460,sackOK,TS val 27154412 ecr 4294911018,nop,wscale 7], length 0
+Linux 計算 MSS 的方法
+計算的方式頗複雜的，分成傳送用的 MSS 和接收用的 MSS。接收用的 MSS 是估算另一端的傳送用的 MSS，會影響 delayed ACK 的發送時機。關於這點，有閒研究清楚再來寫篇 blog。以下只討論傳送用的 MSS。</p>
+<p>綜合前述的知識，我們知道使用者設的 MSS、advmss、PMTU、另一端傳來SYN 帶的 MSS 都會影響真正使用的 MSS。除此之外，TCP 的 window 大小、變動大小的標頭等也有影響。MSS 的值其實會不斷地改變。還有很多細節沒搞懂，就加減看吧。這裡備忘幾個相關函式:</p>
+<p>tcp_advertise_mss()
+tcp_current_mss()
+tcp_sync_mss()
+《用 SystemTap 找出 TCP 如何決定 MSS 的值》有稍微進一步的說明。</p>
+<p>參考資料
+看了拉里拉雜的資料，這幾篇最為精華:</p>
+<p>Path MTU discovery in practice
+Broken packets: IP fragmentation is flawed
+MTU Discovery and MSS Clamping
+備註</p>
+<h1 id="1-xd">1 不懂為啥要擋這個，這篇認為這是腦殘的行為 XD。<a class="headerlink" href="#1-xd" title="Permanent link">&para;</a></h1>
+<h1 id="2-vpn-layer-2-or-3-vpn-layer-7">2 不熟 VPN，但應該是 layer 2 or 3 的 VPN，不是 layer 7 的。<a class="headerlink" href="#2-vpn-layer-2-or-3-vpn-layer-7" title="Permanent link">&para;</a></h1>
+<h1 id="3-mss-linux-pppoe-nat-iptables-clamp-mss-to-pmtu">3 《修改 MSS 解決 Linux PPPOE NAT 後部份網頁無法瀏覽問題》有相關細節，用 iptables的 --clamp-mss-to-pmtu。<a class="headerlink" href="#3-mss-linux-pppoe-nat-iptables-clamp-mss-to-pmtu" title="Permanent link">&para;</a></h1>
+<p>Tcp
+Network</p>
+<hr />
 <p>最新的图解文章都在公众号首发，别忘记关注哦！！如果你想加入百人技术交流群，扫码下方二维码回复「加群」。</p>
 <p><img alt="" src="https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost2/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png" /></p>
 
