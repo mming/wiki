@@ -1,28 +1,15 @@
 
-!!! info
-
-- <span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span><br>
-- <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
-
-
-
 # Welcome
 本站使用MkDocs搭建,使用 Material theme
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ![egg](uploadFiles/imgs/eggindex.png)
 
-## 搭建站点选择MkDocs的原因
-
-* 有自己的vps
-* mkdocs使用python语言，几行命令就完成安装，用vscode remote模式进行日常markdown文档编写，设置crontab定时发布静态页面
-* 自动同步github.io
-* 图床的问题，没想到好的方法 （[vanblog](https://vanblog.mereith.com/intro.html)的确是很好的现成轮子）
 
 ## 网站内容
 
-* 记录日常折腾的东西（可能很杂 python及一些乱七八糟的it技术、项目管理经验、自己的吐槽
-* 存放一些文件
+* 记录日常折腾的东西
+* 存放一些文件、图片
 * 转载一些精彩的文章（声明文章出处
 * ...
 
