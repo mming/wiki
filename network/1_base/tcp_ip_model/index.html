@@ -978,10 +978,19 @@
 <p>应用需要传输的数据可能会非常大，如果直接传输就不好控制，因此当传输层的数据包大小超过 MSS（TCP 最大报文段长度） ，就要将数据包分块，这样即使中途有一个分块丢失或损坏了，只需要重新发送这一个分块，而不用重新发送整个数据包。在 TCP 协议中，我们把每个分块称为一个 <strong>TCP 段</strong>（<em>TCP Segment</em>）。</p>
 <blockquote>
 <p>MSS（TCP 最大报文段长度 maximum segment size ）
-`</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>segment
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>美: [ˈseɡmənt] 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>英: [&#39;seɡmənt] 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>n.  段；部分；片；弓形
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>v.  分割；划分
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>网络  线段；节；区段
+</code></pre></div></p>
 </blockquote>
 <p><img alt="" src="https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost4@main/网络/https/TCP段.png" /></p>
-<p>当设备作为接收方时，传输层则要负责把数据包传给应用，但是一台设备上可能会有很多应用在接收或者传输数据，因此需要用一个编号将应用区分开来，这个编号就是**端口**。</p>
+<p>当设备作为接收方时，传输层则要负责把数据包传给应用，但是一台设备上可能会有很多应用在接收或者传输数据，因此需要用一个编号将应用区分开来，这个编号就是 <strong>端口</strong> 。</p>
+<blockquote>
+<p>Differentiate applications by port. Each application corresponds to one port or multiple ports</p>
+</blockquote>
 <p>比如 80 端口通常是 Web 服务器用的，22 端口通常是远程登录服务器用的。而对于浏览器（客户端）中的每个标签栏都是一个独立的进程，操作系统会为这些进程分配临时的端口号。</p>
 <p>由于传输层的报文中会携带端口号，因此接收方可以识别出该报文是发送给哪个应用。</p>
 <h2 id="_3">网络层<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -990,8 +999,14 @@
 <p>也就是说，我们不希望传输层协议处理太多的事情，只需要服务好应用即可，让其作为应用间数据传输的媒介，帮助实现应用到应用的通信，而实际的传输功能就交给下一层，也就是**网络层**（<em>Internet Layer</em>）。</p>
 <p><img alt="" src="https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost4@main/网络/https/网络层.png" /></p>
 <p>网络层最常使用的是 IP 协议（<em>Internet Protocol</em>），IP 协议会将传输层的报文作为数据部分，再加上 IP 包头组装成 IP 报文，如果 IP 报文大小超过 MTU（以太网中一般为 1500 字节）就会**再次进行分片**，得到一个即将发送到网络的 IP 报文。</p>
+<blockquote>
+<p>MTU（Maximum Transmission Unit 最大传输单元,以太网中一般为 1500 字节）</p>
+</blockquote>
 <p><img alt="" src="https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost/计算机网络/键入网址过程/12.jpg" /></p>
 <p>网络层负责将数据从一个设备传输到另一个设备，世界上那么多设备，又该如何找到对方呢？因此，网络层需要有区分设备的编号。</p>
+<blockquote>
+<p>Number the device by IP address . 网络层区分各设备，传输层区分各应用</p>
+</blockquote>
 <p>我们一般用 IP 地址给设备进行编号，对于 IPv4 协议， IP 地址共 32 位，分成了四段（比如，192.168.100.1），每段是 8 位。只有一个单纯的 IP 地址虽然做到了区分设备，但是寻址起来就特别麻烦，全世界那么多台设备，难道一个一个去匹配？这显然不科学。</p>
 <p>因此，需要将 IP 地址分成两种意义：</p>
 <ul>
