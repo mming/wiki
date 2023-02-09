@@ -1266,9 +1266,19 @@
 <p><img alt="数据包" src="https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost4/网络/数据包.drawio.png" /></p>
 <ul>
 <li>起始帧分界符是一个用来表示包起始位置的标记</li>
-<li>末尾的 <code>FCS</code>（帧校验序列）用来检查包传输过程是否有损坏</li>
+<li>末尾的 <code>FCS</code>（帧校验序列）用来检查包传输过程是否有损坏<blockquote>
+<p>帧校验序列(Frame Check Sequence)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sequence
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>美: [ˈsikwəns] 
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>英: [ˈsiːkwəns] 
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>n.  顺序；次序；一系列；一连串
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>v.  按顺序排列；测定（整套基因或分子成分的）序列
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>网络  连续；数列；时序
+</code></pre></div>
+最后网卡会将包转为电信号，通过网线发送出去。</p>
+</blockquote>
+</li>
 </ul>
-<p>最后网卡会将包转为电信号，通过网线发送出去。</p>
 <blockquote>
 <p>唉，真是不容易，发一个包，真是历经千辛万苦。致此，一个带有许多头部的数据终于踏上寻找目的地的征途了！</p>
 </blockquote>
@@ -1320,6 +1330,7 @@
 <li>因为**路由器**是基于 IP 设计的，俗称**三层**网络设备，路由器的各个端口都具有 MAC 地址和 IP 地址；</li>
 <li>而**交换机**是基于以太网设计的，俗称**二层**网络设备，交换机的端口不具有 MAC 地址。</li>
 </ul>
+<p><code>交换机的端口不具有 MAC 地址!``交换机的端口不具有 MAC 地址!``交换机的端口不具有 MAC 地址!</code></p>
 <blockquote>
 <p>路由器基本原理</p>
 </blockquote>
