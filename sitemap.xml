@@ -2,262 +2,262 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://168848.xyz/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/about/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/log/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/project/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/test/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/1_base/how_os_deal_network_package/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/1_base/tcp_ip_model/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/1_base/what_happen_url/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/http2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/http3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/http_interview/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/http_optimize/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/http_rpc/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/http_websocket/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/https_ecdhe/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/https_optimize/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/2_http/https_rsa/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/challenge_ack/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/isn_deff/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/out_of_order_fin/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/port/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/quic/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/syn_drop/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_down_and_crash/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_drop/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_feature/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_http_keepalive/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_interview/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_no_accpet/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_no_listen/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_optimize/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_problem/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_queue/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_stream/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_tcpdump/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_three_fin/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_tls/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_tw_reuse_close/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/tcp_unplug_the_network_cable/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/3_tcp/time_wait_recv_syn/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/4_ip/ip_base/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/4_ip/ping/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/4_ip/ping_lo/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/5_learn/draw/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/network/5_learn/learn_network/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/projectManagement/scrcpy/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/projectManagement/varchar/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/python/mkdocs/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/vps/acme/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/vps/telegramBot/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/vps/tmuxCheatSheet/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://168848.xyz/vps/updateCentos7Git/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
