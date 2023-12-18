@@ -17,19 +17,19 @@ nav:
   - 首页: index.md
   - 折腾log: log.md
 - Documents:
-#  - python: 
-  - python|about mkdocs: python/mkdocs.md
-#  - VPS: 
-  - VPS|升级centos7的git程序: vps/updateCentos7Git.md
-  - VPS|tmux快捷键: vps/tmuxCheatSheet.md
-  - VPS|acme使用: vps/acme.md
-  - VPS|telegramBot: vps/telegramBot.md
-#  - Project Manage:
-  - Project Manage|项目管理: project.md
-  - Project Manage|手机投屏: projectManagement/scrcpy.md
-  - Project Manage|字符与字节（mysql）: projectManagement/varchar.md
-#    - test: 
-  - test1: test.md
+  - python: 
+    - about mkdocs: python/mkdocs.md
+  - VPS: 
+    - 升级centos7的git程序: vps/updateCentos7Git.md
+    - tmux快捷键: vps/tmuxCheatSheet.md
+    - acme使用: vps/acme.md
+    - telegramBot: vps/telegramBot.md
+  - Project Manage:
+    - 项目管理: project.md
+    - 手机投屏: projectManagement/scrcpy.md
+    - 字符与字节（mysql）: projectManagement/varchar.md
+    - test: 
+      - test1: test.md
 
 
 

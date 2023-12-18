@@ -15,10 +15,20 @@ wget -qO- get.docker.com | bash
 自动部署到github gitpages项目 {github用户名}.github.io/{项目名}
 ```
 mkdocs gh-deploy
+# 默认是部署到Project Pages
 ```
+如果想部署到User Pages，需要{github用户名}.github.io也clone到本地，并在user page仓库的环境中执行下述命令
 自动部署到github gitpages个人页面 {github用户名}.github.io
+```text
+mkdocs gh-deploy --config-file ../{project page的文件夹}/mkdocs.yml --remote-branch main
 ```
-mkdocs gh-deploy --config-file ../{文件夹}/mkdocs.yml --remote-branch main
+
+参考文件夹结构：
+```text
+my-project/
+    mkdocs.yml
+    docs/
+orgname.github.io/
 ```
 
 # .gitignore 文件
