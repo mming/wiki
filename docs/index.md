@@ -1,17 +1,36 @@
 
 # Welcome
-本站使用MkDocs搭建,使用 Material theme
+
+
+![egg](uploadFiles/imgs/The-theory-of-Golden-Circle-model.webp)
+
+## Why
+费曼学习法
+
+## How
+常见blog系统及技术
+```text
+1. WordPress
+2. Typecho
+3. Ghost
+4. Jekyll
+5. Hugo --> go
+6. Hexo --> Node.js
+7. Halo -->java
+```
+但是python+markdown才是我的选择，所以使用MKDocs
+本站使用MkDocs搭建,使用 ~~Material theme~~ [mkdocs-simple-blog主题](https://github.com/FernandoCelmer/mkdocs-simple-blog)
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## What
 
-![egg](uploadFiles/imgs/eggindex.png)
-
-
-## 网站内容
-
-* 记录日常折腾的东西
+* 记录日常折腾的点点滴滴
+* 记录学习笔记
+* 记录一些有意思的东西
+* 记录一些有用的工具
 * 存放一些文件、图片
 * 转载一些精彩的文章（声明文章出处
 * ...
+
 
 # 附录
 
