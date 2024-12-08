@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://0001024.xyz/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/about/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/about/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/log/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/log/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/project/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/project/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/test/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/test/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/projectManagement/scrcpy/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/projectManagement/scrcpy/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/projectManagement/varchar/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/projectManagement/varchar/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/python/mkdocs/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/python/mkdocs/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/vps/acme/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/vps/acme/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/vps/telegramBot/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/vps/telegramBot/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/vps/tmuxCheatSheet/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/vps/tmuxCheatSheet/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://0001024.xyz/vps/updateCentos7Git/</loc>
-         <lastmod>2023-12-17</lastmod>
+         <loc>https://mming.github.io/vps/updateCentos7Git/</loc>
+         <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
